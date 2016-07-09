@@ -12,5 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jpreLoader.js
+//= require bootstrap.min.js
+//= require jquery.isotope.min.js
+//= require easing.js
+//= require jquery.flexslider-min.js
+//= require jquery.scrollto.js
+//= require owl.carousel.js
+//= require classie.js
+//= require video.resize.js
+//= require validation.js
+//= require wow.min.js
+//= require jquery.magnific-popup.min.js
+//= require enquire.min.js
+//= require jquery.stellar.min.js
+//= require designesia.js
+//= require typed.js
+//= require typed-custom.js
 //= require_tree .
