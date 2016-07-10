@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'high_voltage'
 gem 'devise'
 gem "paperclip"
+gem "rolify"
 
 group :development, :test do
   gem 'byebug'
