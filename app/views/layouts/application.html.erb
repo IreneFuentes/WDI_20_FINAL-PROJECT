@@ -29,10 +29,12 @@
                 <li><a href="comments.html">Comments</a></li>
                 <li>
                 <% if user_signed_in? %>
-                  <a href="#"><%= current_user.name %>(<%= current_user.email %>)</a>
+                  <a href="#"><%= current_user.name %></a>
                   <ul>
                     <li><%= link_to 'Settings', edit_user_registration_path %></li>
+                    <li><%= link_to 'Book Now', page_path('book_now') %></li>
                     <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+
                   </ul>
                   <% else %>
                   <a href="#">User</a>
@@ -75,19 +77,19 @@
                 <ul class="list-border-bottom">
                   <li>
                     <span class="pull-left">Monday - Friday</span>
-                    <span class="pull-right id-color">9 am to 10 pm</span>
+                    <span class="pull-right id-color">9 am to 8 pm</span>
                     <div class="clearfix"></div>
                   </li>
                   <li>
                     <span class="pull-left">Saturday</span>
-                    <span class="pull-right id-color">9 am to 12 pm</span>
+                    <span class="pull-right id-color">9 am to 8 pm</span>
                     <div class="clearfix"></div>
                   </li>
-                  <li>
+                 <!--  <li>
                     <span class="pull-left">Sunday &amp; Holiday</span>
                     <span class="pull-right id-color">8 am to 12 pm</span>
                     <div class="clearfix"></div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -98,11 +100,11 @@
               <h3>Contact Us</h3>
 
               <address>
-                <span>100 Mainstreet Center, Sydney</span>
-                <span><strong>Phone:</strong>(208) 333 9296</span>
-                <span><strong>Fax:</strong>(208) 333 9298</span>
-                <span><strong>Email:</strong><a href="mailto:contact@modis-salon.com">contact@modis-salon.com</a></span>
-                <span><strong>Web:</strong><a href="#">http://modis-salon.com</a></span>
+                <span>West London Buddhist Centre, 45a Porchester Rd, W25DP, London</span>
+                <span><strong>Phone:</strong>07463370545</span>
+                
+                <span><strong>Email:</strong><a href="mardegran@gmail.com">mardegran@gmail.com</a></span>
+                <span><strong>Web:</strong><a href="#">http://www.californianmassage.co.uk/</a></span>
               </address>
             </div>
           </div>
@@ -115,16 +117,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              &copy; Copyright 2016 - Modis by Designesia                     
+              &copy; Copyright 2016                      
             </div>
             <div class="col-md-6 text-right">
               <div class="social-icons">
                 <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                 <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                <a href="#"><i class="fa fa-rss fa-lg"></i></a>
-                <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                <a href="#"><i class="fa fa-skype fa-lg"></i></a>
-                <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
+                
               </div>
             </div>
           </div>
