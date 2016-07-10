@@ -34,7 +34,6 @@
                     <li><%= link_to 'Settings', edit_user_registration_path %></li>
                     <li><%= link_to 'Book Now', page_path('book_now') %></li>
                     <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-
                   </ul>
                   <% else %>
                   <a href="#">User</a>
@@ -44,6 +43,18 @@
                   </ul>
                   <% end %>
                 </li>
+                <% if user_signed_in? && current_user.has_role?(:admin) %>
+                 <li><%= link_to 'Admin', admin_panel_path %>
+                   <ul>
+                     
+                    <li><%= link_to 'Users', admin_users_path %></li>
+                    <li><%= link_to 'Bookings', admin_bookings_path %></li>
+                    <li><%= link_to 'Comments', admin_comments_path %></li>
+                   </ul>
+
+                 </li>
+
+                 <% end %>
               </ul>
             </nav>
             <div class="clearfix"></div>

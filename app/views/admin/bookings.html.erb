@@ -1,0 +1,63 @@
+<!-- subheader -->
+  <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                 <br>
+                 <br>
+                 <br>
+                  <h4>Bookings</h4>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- subheader close -->
+
+
+<%= render "menu" %>
+<br>
+<br>
+
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+
+
+<table class="table table-hover table-striped table-bordered"> 
+    <thead> 
+      <tr> 
+        <th>Avatar</th>
+        <th>User</th>
+        <th>Date</th> 
+        <th>Time</th> 
+        <th>Massage Type</th> 
+        <th>Status</th> 
+      </tr> 
+    </thead>
+    <tbody> 
+    <% @bookings.each do |booking| %>
+
+     <tr> 
+      <td><%= image_tag booking.user.avatar.url(:thumb), class: 'img-circle' %></td>
+      <td><%= booking.user.name %> (<%= booking.user.email %>)</td>
+       <td><%= booking.date.strftime("%d/%m/%Y") %></td>
+       <td><%= booking.time %></td> 
+       <td><%= booking.massage_type %></td> 
+
+       <td>
+         <% if booking.status == "pending" %>
+          <%= link_to 'Confirm', confirm_booking_path(booking.id), class: "btn btn-success btn-xs", method: :post%>
+          <%= link_to 'Reject', reject_booking_path(booking.id), class: "btn btn-danger btn-xs", method: :post %>
+        <% else %>
+            <%= status_label(booking.status) %>
+        <% end %>
+      </td>
+     </tr>
+      <% end %> 
+  </tbody>
+</table>
+
+
+</div>
+</div>
+</div>

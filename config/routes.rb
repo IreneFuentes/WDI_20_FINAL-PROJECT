@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+ 
+  get 'admin/users', as: :admin_users
+  get 'admin/bookings', as: :admin_bookings
+  get 'admin/comments', as: :admin_comments
+  get 'admin' => "admin#admin", as: :admin_panel
+  # hacemos una ruta nueva, con el metodo post, para confirmar el booking
+  post '/admin/bookings/:id/confirm' => "admin#confirm", as: :confirm_booking
+  post '/admin/bookings/:id/reject' => "admin#reject", as: :reject_booking
+
+
   resources :comments, only: [:index, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations'
@@ -11,6 +21,7 @@ Rails.application.routes.draw do
   root 'high_voltage/pages#show', id: 'home'
 
   post '/booking/create' => 'booking#create'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
