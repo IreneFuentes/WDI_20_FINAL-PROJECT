@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # hacemos una ruta nueva, con el metodo post, para confirmar el booking
   post '/admin/bookings/:id/confirm' => "admin#confirm", as: :confirm_booking
   post '/admin/bookings/:id/reject' => "admin#reject", as: :reject_booking
+  delete '/admin/users/:id/destroy' => 'admin#destroy_user', as: :destroy_user
+  delete '/admin/comments/:id/destroy' => 'admin#destroy_comment', as: :destroy_comment
 
 
   resources :comments, only: [:index, :create, :destroy]

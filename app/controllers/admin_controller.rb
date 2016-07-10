@@ -4,6 +4,7 @@ class AdminController < ApplicationController
   end
 
   def users
+    @users = User.all.order('created_at desc')
   end
 
   def bookings
@@ -11,6 +12,7 @@ class AdminController < ApplicationController
   end
 
   def comments
+     @comments = Comment.all.order('created_at desc')
   end
 
   def confirm
@@ -28,4 +30,22 @@ class AdminController < ApplicationController
 
     redirect_to admin_bookings_path
   end
+
+  def destroy_user
+ 
+ user = User.find_by_id(params[:id])
+ user.destroy
+
+ redirect_to admin_users_path
+  end
+
+  def destroy_comment
+ 
+ comment = Comment.find_by_id(params[:id])
+ comment.destroy
+
+ redirect_to admin_comments_path
+  end
+
+
 end
