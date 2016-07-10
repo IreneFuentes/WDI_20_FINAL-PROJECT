@@ -1,0 +1,49 @@
+<!-- subheader -->
+  <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1>Comments</h1>
+                  <h4>What People Says</h4>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- subheader close -->
+<!-- // obligamos al usuario q este logeado  -->
+<% if user_signed_in? %>
+<%= render 'form' %>
+<% end %>
+
+
+
+<!-- content begin -->
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="masonry">
+        <% @comments.each do |comment| %>
+          <div class="col-md-4 marginbottom30 item">
+            <div class="de_testi">
+              <blockquote>
+                <p><%= comment.content %></p>
+              </blockquote>
+              <div class="de_testi_by">
+                <span class="de_testi_pic">
+                <%= image_tag comment.user.avatar.url(:thumb), class: 'img-circle' %>
+                </span>
+                <div class="de_testi_company">
+                  <strong><%= comment.user.name %></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if user_signed_in? %>
+<%= render 'form' %>
+<% end %>

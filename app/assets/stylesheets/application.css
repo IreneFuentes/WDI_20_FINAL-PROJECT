@@ -10,6 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ 
+ * require bootstrap.css
+ * require jpreloader.css
+ * require animate.css
+ * require plugin.css
+ * require owl.carousel.css
+ * require owl.theme.css
+ * require owl.transitions.css
+ * require magnific-popup.css
+ * require style.css
+ * require bg.css
+ * require color.css
+ * require font-awesome.css
+ * require elegant-icons-font.css
+ * require et-line-fonts.css
+ * require rev-settings.css
  *= require_tree .
  *= require_self
  */
