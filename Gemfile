@@ -15,6 +15,7 @@ gem 'devise'
 # para poder subir las imagenes
 gem "paperclip"
 gem "rolify"
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
