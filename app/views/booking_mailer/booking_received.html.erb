@@ -1,0 +1,9 @@
+<h1>New booking received</h1>
+
+<%= image_tag @booking.user.avatar.url(:thumb) %>
+<p>User: <%= @booking.user.name %> (<%= @booking.user.email %>)</p>
+<p>Booking Date: <%= @booking.date.strftime("%d/%m/%Y") %></p>
+<p>Booking Time: <%= @booking.time %></p>
+<p>Phone Number: <%= @booking.user.phone_number %></p>
+<p>Massage Type: <%= @booking.massage_type %></p>
+<p>Note: <%= @booking.note%></p>

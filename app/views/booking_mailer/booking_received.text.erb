@@ -1,0 +1,8 @@
+New booking received
+
+User: <%= @booking.user.name %> (<%= @booking.user.email %>)
+Booking Date: <%= @booking.date.strftime("%d/%m/%Y") %>
+Booking Time: <%= @booking.time %>
+Phone Number: <%= @booking.user.phone_number %>
+Massage Type: <%= @booking.massage_type %>
+Note: <%= @booking.note%>

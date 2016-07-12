@@ -1,0 +1,6 @@
+Hi <%= @booking.user.name %>!
+
+Your booking has been confirmed! Here are the details:
+Booking Date: <%= @booking.date.strftime("%d/%m/%Y") %>
+Booking Time: <%= @booking.time %>
+Massage Type: <%= @booking.massage_type %>

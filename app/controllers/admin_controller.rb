@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  
+
   def admin
   end
 
@@ -20,6 +20,8 @@ class AdminController < ApplicationController
     booking.status = :confirmed
     booking.save
 
+    BookingMailer.booking_confirmed(booking.id).deliver_now
+
     redirect_to admin_bookings_path
   end
 
@@ -28,15 +30,17 @@ class AdminController < ApplicationController
     booking.status = :rejected
     booking.save
 
+    BookingMailer.booking_rejected(booking.id).deliver_now
+
     redirect_to admin_bookings_path
   end
 
   def destroy_user
  
- user = User.find_by_id(params[:id])
- user.destroy
+     user = User.find_by_id(params[:id])
+     user.destroy
 
- redirect_to admin_users_path
+     redirect_to admin_users_path
   end
 
   def destroy_comment
@@ -46,6 +50,7 @@ class AdminController < ApplicationController
 
  redirect_to admin_comments_path
   end
+
 
 
 end

@@ -6,9 +6,10 @@ class BookingController < ApplicationController
     booking = current_user.bookings.create(booking_params)
     booking.status = :pending
     booking.save
-    # TODO: Notify manager with a new email
-
-    # TODO: Notify current_user with a new email
+    # Notify manager with a new email
+    BookingMailer.booking_received(booking.id).deliver_now
+    # Notify current_user with a new email
+    BookingMailer.booking_pending(booking.id).deliver_now
     
     redirect_to edit_user_registration_path(anchor: 'bookings'), notice: 'Booking created succesfully'
   end

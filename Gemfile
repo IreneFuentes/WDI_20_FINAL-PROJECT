@@ -18,6 +18,7 @@ gem "rolify"
 
 group :development, :test do
   gem 'byebug'
+  gem 'dotenv-rails'
 end
 
 group :development do
