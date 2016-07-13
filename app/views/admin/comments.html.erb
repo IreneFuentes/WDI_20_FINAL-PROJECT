@@ -17,36 +17,36 @@
 <br>
 
 <div class="container">
-<div class="row">
-<div class="col-md-8 col-md-offset-2">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
 
 
-<table class="table table-hover table-striped table-bordered"> 
-    <thead> 
-      <tr> 
-        <th>Avatar</th>
-        <th>User</th>
-        <th>Comment</th> 
-        <th></th> 
-      </tr> 
-    </thead>
-    <tbody> 
-    <% @comments.each do |comment| %>
+      <table class="table table-hover table-striped table-bordered"> 
+        <thead> 
+          <tr> 
+            <th>Avatar</th>
+            <th>User</th>
+            <th>Comment</th> 
+            <th></th> 
+          </tr> 
+        </thead>
+        <tbody> 
+          <% @comments.each do |comment| %>
 
-     <tr> 
-       <td><%= image_tag comment.user.avatar.url(:thumb), class: 'img-circle' %></td>
-       <td><%= comment.user.name %> (<%= comment.user.email %>)</td>
-       <td><%= comment.content %></td>
-       
-       <td><%= link_to("Destroy", destroy_comment_path(comment.id) , class: 'btn btn-danger btn-xs', method: :delete) %></td>
+          <tr> 
+           <td><%= image_tag comment.user.avatar.url(:thumb), class: 'img-circle' %></td>
+           <td><%= comment.user.name %> (<%= comment.user.email %>)</td>
+           <td><%= comment.content %></td>
+           
+           <td><%= link_to("Destroy", destroy_comment_path(comment.id) , class: 'btn btn-danger btn-xs', method: :delete) %></td>
 
-       
-     </tr>
-      <% end %> 
-  </tbody>
-</table>
+           
+         </tr>
+         <% end %> 
+       </tbody>
+     </table>
 
 
-</div>
-</div>
+   </div>
+ </div>
 </div>

@@ -1,31 +1,28 @@
-
-  <%= form_for(@comment, :html => { :class => "form-horizontal" }) do |f| %> 
+<%= form_for(@comment, :html => { :class => "form-horizontal" }) do |f| %> 
 
 <br>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <div class="field">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="field">
+      <div class="panel panel-default">
+        <div class="panel-heading">
 
-       
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-           <h3 class="panel-title"></h3>
-      
-
-             <div class="form-group">
-              <%= f.label :content, class: "col-sm-4 control-label" %>
-                <div class="col-sm-8">
-                  <%= f.text_area :content, class: "form-control"  %>
-                </div>
-             </div>
-  
+         <h3 class="panel-title"></h3>
+         <div class="form-group">
+          <%= f.label :content, class: "col-sm-4 control-label" %>
+          <div class="col-sm-8">
+            <%= f.text_area :content, class: "form-control"  %>
+          </div>
+        </div>
+        
         <div class="panel-footer">
           <div class="actions">
             <%= f.submit class: "btn btn-default"%>
           </div>
         </div>
         <% end %>
+      </div>
     </div>
   </div>
+</div>
 </div>
