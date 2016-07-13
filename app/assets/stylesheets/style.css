@@ -2101,7 +2101,7 @@ border:none;
 	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
-	color:#fff;
+	color:#000;
 	border:solid 3px;
 	}
 	
@@ -3300,35 +3300,9 @@ p.lead{
 opacity:.8;
 }
 
-.panel-heading,.panel-body{
-background:#27282B;
-border:solid 1px #404040 !important;
-border-radius:0 !important;
-}
-
-.panel-body{
-border-top:none !important;
-}
 
 .progress{
 background:#27282B;
-}
-
-.panel-heading h4 a{
-display:block;
-}
-
-.panel-heading h4 a:hover{
-color:#eceff3;
-}
-
-.panel-default, .panel-collapse, .panel-collapse, .panel-group .panel {
-border:none !important;
-border-radius:0 !important;
-}
-
-.panel-heading{
-background:#222 !important;
 }
 
 .table-bordered, .table-bordered td{
