@@ -13,10 +13,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # es para las paginas estaticas
 gem 'high_voltage'
 gem 'devise'
-# para poder subir las imagenes
-gem "paperclip"
 gem "rolify"
 gem 'aws-sdk'
+gem "paperclip"
 
 group :development, :test do
   gem 'byebug'
@@ -29,3 +28,4 @@ group :development do
 end
 
 gem 'rails_12factor', group: :production
+# para poder subir las imagenes
