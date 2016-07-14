@@ -15,6 +15,7 @@ gem 'high_voltage'
 gem 'devise'
 gem "rolify"
 gem 'aws-sdk'
+# para poder subir las imagenes
 gem "paperclip"
 
 group :development, :test do
@@ -28,4 +29,4 @@ group :development do
 end
 
 gem 'rails_12factor', group: :production
-# para poder subir las imagenes
+
